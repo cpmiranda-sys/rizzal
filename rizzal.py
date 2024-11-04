@@ -3,6 +3,7 @@ from tkinter import ttk, messagebox
 import random
 from ttkbootstrap import Style
 from PIL import Image, ImageTk
+import os  # Import os for path handling
 
 # Expanded Data about José Rizal
 rizal_data = {
@@ -109,7 +110,7 @@ class RizalApp:
 
     def create_tabs(self):
         # Create each tab with additional historical context
-        self.tab1 = self.create_tab('Early Life', rizal_data['birth'], "E:/python/rizzzal/src/early_life.jpg", [
+        self.tab1 = self.create_tab('Early Life', rizal_data['birth'], self.get_image_path('early_life.jpg'), [
             ("Childhood", self.show_childhood_frame),
             ("Family Life", self.show_family_frame),
             ("Education", self.show_education_frame)
@@ -177,6 +178,10 @@ class RizalApp:
         label.pack(pady=20, padx=20)
         return frame
 
+    def get_image_path(self, filename):
+        """ Return the relative path to the images. Modify if the directory structure changes."""
+        return os.path.join('src', filename)
+
     def set_background_image(self, frame, img_path):
         bg_image = Image.open(img_path)
         bg_image = bg_image.resize((900, 700), Image.LANCZOS)
@@ -198,7 +203,7 @@ class RizalApp:
         return frame
 
     def create_list_tab(self, frame, items, title_key, detail_key, section_name):
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
         item_frame = ttk.Frame(frame)
         item_frame.pack(pady=10)
 
@@ -226,7 +231,7 @@ class RizalApp:
     def create_events_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Important Events')
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
         events_str = "\n".join(rizal_data['life_events'])
         label = ttk.Label(frame, text=f"Important Life Events:\n{events_str}", wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=10)
@@ -235,7 +240,7 @@ class RizalApp:
     def create_legacy_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Legacy')
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
         label = ttk.Label(frame, text=rizal_data['legacy'], wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=10)
         return frame
@@ -243,7 +248,7 @@ class RizalApp:
     def create_quotes_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Quotes')
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
         quote_label = ttk.Label(frame, text=random.choice(rizal_data['quotes']), wraplength=700, font=("Helvetica", 12, "italic"), background="#f2f2f2")
         quote_label.pack(pady=30)
         share_button = ttk.Button(frame, text="Share Quote", command=lambda: messagebox.showinfo("Share Quote", quote_label['text']))
@@ -253,7 +258,7 @@ class RizalApp:
     def create_trivia_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Trivia')
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
         trivia_str = "\n".join(rizal_data['trivia'])
         label = ttk.Label(frame, text=f"Interesting Trivia:\n{trivia_str}", wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=8)
@@ -262,7 +267,7 @@ class RizalApp:
     def create_quiz_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Quiz')
-        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, self.get_image_path('lifeandworksofrizal.jpg'))
 
         self.question_label = ttk.Label(frame, text="", font=("Helvetica", 14, "bold"), background="#f2f2f2")
         self.question_label.pack(pady=20)
