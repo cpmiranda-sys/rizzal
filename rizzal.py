@@ -3,9 +3,8 @@ from tkinter import ttk, messagebox
 import random
 from ttkbootstrap import Style
 from PIL import Image, ImageTk
-import os  # Import os for path handling
+import os  
 
-# Expanded Data about José Rizal
 rizal_data = {
     'birth': (
         "José Rizal was born on June 19, 1861, in Calamba, Laguna, Philippines. "
