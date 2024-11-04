@@ -109,7 +109,7 @@ class RizalApp:
 
     def create_tabs(self):
         # Create each tab with additional historical context
-        self.tab1 = self.create_tab('Early Life', rizal_data['birth'], "E:/python/rizzal/src/early_life.jpg", [
+        self.tab1 = self.create_tab('Early Life', rizal_data['birth'], "E:/python/rizzzal/src/early_life.jpg", [
             ("Childhood", self.show_childhood_frame),
             ("Family Life", self.show_family_frame),
             ("Education", self.show_education_frame)
@@ -198,31 +198,35 @@ class RizalApp:
         return frame
 
     def create_list_tab(self, frame, items, title_key, detail_key, section_name):
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
         item_frame = ttk.Frame(frame)
         item_frame.pack(pady=10)
 
         item_listbox = tk.Listbox(item_frame, font=("Helvetica", 11), selectmode=tk.SINGLE)
-
-        for item in items:
-            item_listbox.insert(tk.END, item[title_key])
         item_listbox.pack(side='left', padx=10)
 
-        detail_button = ttk.Button(item_frame, text="View Details", command=lambda: self.show_item_details(item_listbox, items, detail_key))
-        detail_button.pack(side='left', padx=10)
+        # Populate the list with titles
+        for item in items:
+            item_listbox.insert(tk.END, item[title_key])
+        
+        detail_label = ttk.Label(item_frame, text="", wraplength=400, font=("Helvetica", 12), background="#f2f2f2")
+        detail_label.pack(side='left', padx=10, fill='y')
 
-    def show_item_details(self, listbox, items, detail_key):
+        # Bind the selection event to show the details in the label
+        item_listbox.bind("<<ListboxSelect>>", lambda event: self.show_item_details(item_listbox, items, detail_key, detail_label))
+
+    def show_item_details(self, listbox, items, detail_key, detail_label):
         selected_index = listbox.curselection()
         if selected_index:
             item = items[selected_index[0]]
-            messagebox.showinfo(item['title'], item[detail_key])
+            detail_label.config(text=item[detail_key])  # Set the text of detail_label to show item details
         else:
-            messagebox.showwarning("Selection Error", "Please select a title first.")
+            detail_label.config(text="Please select a title to view details.")  # Default message if nothing is selected
 
     def create_events_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Important Events')
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
         events_str = "\n".join(rizal_data['life_events'])
         label = ttk.Label(frame, text=f"Important Life Events:\n{events_str}", wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=10)
@@ -231,7 +235,7 @@ class RizalApp:
     def create_legacy_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Legacy')
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
         label = ttk.Label(frame, text=rizal_data['legacy'], wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=10)
         return frame
@@ -239,7 +243,7 @@ class RizalApp:
     def create_quotes_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Quotes')
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
         quote_label = ttk.Label(frame, text=random.choice(rizal_data['quotes']), wraplength=700, font=("Helvetica", 12, "italic"), background="#f2f2f2")
         quote_label.pack(pady=30)
         share_button = ttk.Button(frame, text="Share Quote", command=lambda: messagebox.showinfo("Share Quote", quote_label['text']))
@@ -249,7 +253,7 @@ class RizalApp:
     def create_trivia_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Trivia')
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
         trivia_str = "\n".join(rizal_data['trivia'])
         label = ttk.Label(frame, text=f"Interesting Trivia:\n{trivia_str}", wraplength=700, font=("Helvetica", 12), background="#f2f2f2")
         label.pack(pady=20, padx=8)
@@ -258,7 +262,7 @@ class RizalApp:
     def create_quiz_tab(self):
         frame = ttk.Frame(self.notebook)
         self.notebook.add(frame, text='Quiz')
-        self.set_background_image(frame, "E:/python/rizzal/src/lifeandworksofrizal.jpg")
+        self.set_background_image(frame, "E:/python/rizzzal/src/lifeandworksofrizal.jpg")
 
         self.question_label = ttk.Label(frame, text="", font=("Helvetica", 14, "bold"), background="#f2f2f2")
         self.question_label.pack(pady=20)
