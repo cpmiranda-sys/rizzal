@@ -4,116 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life and Works of Rizal</title>
+    <title>Jose Rizal - Life and Works</title>
+
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <header>
+    <!-- Header -->
+    <header class="navbar">
         <nav>
-            <ul>
-                <li><a href="#legislative-process">Republic Act No. 1425-Rizal Law</a></li>
-                <li><a href="#early-life">Early Life</a></li>
-                <li><a href="#education-abroad">Education Abroad</a></li>
-                <li><a href="#literary-works">Literary Works</a></li>
-                <li><a href="#revolutionary-ideas">Revolutionary Ideas</a></li>
-                <li><a href="#legacy">Legacy</a></li>
+            <ul class="navbar-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#legislative-process">Legislative Process</a></li>
+                <li><a href="#life-of-rizal">Biography</a></li>
             </ul>
         </nav>
     </header>
 
-<!-- Legislative Process Section -->
-<section id="Legislative">
-  <h2>Republic Act No. 1425-Rizal Law</h2>
-  <button class="dropdown-btn" onclick="toggleDropdown()">Show Legislative Process</button>
-  <div id="dropdown" class="dropdown-content">
-      <div class="step">
-          <strong>Step 1: Filing of the Rizal Bill (April 3, 1956)</strong>
-          <p>On April 3, 1956, Senate Bill No. 438 was filed by Jose P. Laurel, Chair of the Senate Committee on Education. He passionately argued for the bill, proposing that Rizal’s life, works, and writings be included in the educational curriculum. However, the bill faced opposition, especially from the Catholic Church, which disapproved of including Rizal’s critical novels in the school curriculum.</p>
-      </div>
-      <div class="step">
-          <strong>Step 2: Controversy and Debates Begin (April 23, 1956)</strong>
-          <p>Debates began on April 23, 1956. One major opposition came from Francisco "Soc" Rodrigo, who was against the bill. The Catholic Church, a powerful institution at the time, lobbied fiercely against it, creating a rift between those supporting the Church’s stance and those defending the bill’s objective to honor Rizal’s legacy.</p>
-      </div>
-      <div class="step">
-          <strong>Step 3: House of Representatives Debate (April - May 1956)</strong>
-          <p>House Bill No. 5561, a mirror version of Senate Bill 438, was filed by Representative Jacobo Z. Gonzales on April 19, 1956. The debates in the House started on May 9, 1956, focusing on whether the mandatory reading of Rizal’s novels, *Noli Me Tangere* and *El Filibusterismo*, was constitutional. A significant point of contention was the unexpurgated versions of the novels.</p>
-      </div>
-      <div class="step">
-          <strong>Step 4: Amendments and Compromise (May 9 - 14, 1956)</strong>
-          <p>To move the bill forward, Senator Laurel proposed amendments to remove the compulsory reading of Rizal’s novels while still including other works by Rizal. The amended version was accepted and both Houses agreed on this revision by May 14, 1956, which made the law more acceptable to a broader group of people.</p>
-      </div>
-      <div class="step">
-          <strong>Step 5: Technical Issues and Final Approval (May 17, 1956)</strong>
-          <p>The bill faced a potential setback when the House was about to adjourn, and President Magsaysay had not yet certified the bill as a priority. To overcome this, the supporters in the House took steps to ensure the bill passed without further delays by ensuring that the Senate version and the House version were printed using the same templates. The final version was passed on May 17, 1956.</p>
-      </div>
-      <div class="step">
-          <strong>Step 6: The Signing into Law (June 12, 1956)</strong>
-          <p>On June 12, 1956, President Ramon Magsaysay signed the bill into law, officially known as Republic Act No. 1425, or the Rizal Law. The law made it mandatory for all educational institutions to include the study of Rizal’s life, works, and writings, particularly *Noli Me Tangere* and *El Filibusterismo*, in their curricula.</p>
-      </div>
-  </div>
-</section>
-
-
-    <!-- Early Life Section -->
-    <section id="early-life">
-        <h2>Early Life of Jose Rizal</h2>
-        <p>José Protacio Rizal Mercado y Alonzo Realonda was born on June 19, 1861, in Calamba, Laguna, Philippines. He was the seventh of eleven children in the family of Francisco Mercado and Teodora Alonso Realonda. His family was well-off and respected in their town, being landowners with a long history of service to the community. Rizal’s early life was marked by intellectual curiosity and a profound sense of justice.</p>
-        
-        <p>As a child, Rizal was known for his brilliance. He learned the alphabet at the age of three and was reading and writing in Spanish by the time he was five. His early education was at home, under the tutelage of his mother, Teodora Alonso. His mother, a highly educated woman for her time, instilled in him a love for learning and a deep appreciation for literature.</p>
-
-        <p>Rizal’s childhood in Calamba was both idyllic and tragic. Despite the family's relative wealth, they faced constant oppression from the Spanish authorities, who imposed heavy taxes and social discrimination on the native Filipinos. This injustice would shape Rizal's views on the importance of reform and freedom for his people.</p>
-
-        <p>Rizal’s exceptional intellect was recognized early, and he eventually moved to Manila to pursue further education. He enrolled at the University of Santo Tomas to study medicine, and later traveled to Spain to continue his education in Europe.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="hero" data-aos="fade-up">
+        <div class="hero-content">
+            <img src="src/rizal.jpg" alt="Jose Rizal" class="framed-image" data-aos="zoom-in-left">
+            <div class="hero-text">
+                <h1 data-aos="fade-right">Jose Rizal</h1>
+                <p data-aos="fade-left">A prominent figure in Philippine history, Dr. José Protacio Rizal Mercado y Alonzo Realonda was a Filipino nationalist, polymath, and revolutionary. He played a crucial role in the country's movement for independence from Spanish colonial rule.</p>
+                <a href="#legislative-process" class="button" data-aos="fade-up" data-aos-delay="500">Learn More</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Education Abroad Section -->
-    <section id="education-abroad">
-        <h2>Education Abroad</h2>
-        <p>Rizal’s thirst for knowledge led him to pursue studies abroad. In 1882, he traveled to Spain to study at the Universidad Central de Madrid, where he earned his degree in Medicine. His time in Europe exposed him to modern European thought, which broadened his horizons and solidified his resolve to fight for Filipino rights.</p>
-
-        <p>While in Europe, Rizal was also exposed to revolutionary ideas and reform movements. His experiences in various countries such as France, Belgium, and Germany shaped his views on nationalism and the need for reforms in the Philippines. He met many influential figures in Europe who were supportive of his ideals.</p>
+    <!-- Legislative Process Section -->
+    <section id="legislative-process" class="content-section" data-aos="fade-up">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2 data-aos="fade-down">Legislative Process of the Rizal Law</h2>
+            <div class="box" data-aos="slide-left">
+                <h3>Introduction and Filing of the Rizal Bill</h3>
+                <p>On April 3, 1956, Senate Bill No. 438, also known as the Rizal Bill, was introduced by Senator Jose P. Laurel, Chair of the Senate Committee on Education. This bill proposed that all public and private schools in the Philippines include courses on the life, works, and writings of Jose Rizal, particularly his novels *Noli Me Tangere* and *El Filibusterismo*.</p>
+            </div>
+            <div class="box" data-aos="slide-right">
+                <h3>Opposition and Controversy</h3>
+                <p>The bill encountered strong opposition, especially from the Catholic Church, due to the controversial nature of Rizal’s works, which criticized the clergy. This opposition created significant debates between the Church’s allies and those supporting the bill, including Claro M. Recto and Francisco “Soc” Rodrigo, who led the discussions in favor of the bill.</p>
+            </div>
+            <div class="box" data-aos="slide-left">
+                <h3>Debates and Amendments</h3>
+                <p>Debates on the bill began in both the Senate and the House of Representatives. A similar version of the bill, House Bill No. 5561, was filed on April 19, 1956, by Representative Jacobo Z. Gonzales. The House Committee on Education approved the bill without amendments, but the debates, which started on May 9, 1956, centered around the compulsory reading of the unexpurgated versions of Rizal's novels. To address concerns, Senator Laurel proposed amendments, including removing the requirement to read the novels in their unedited form and including other writings of Rizal.</p>
+            </div>
+            <div class="box" data-aos="slide-right">
+                <h3>Approval and Final Steps</h3>
+                <p>The amended bill was eventually agreed upon by both houses of Congress. However, technical delays nearly halted its passage, as the House was about to adjourn and President Magsaysay had not prioritized the bill. Skillful negotiations ensured that no further amendments were added, and the bill was transmitted to the President without delay. On June 12, 1956, President Ramon Magsaysay signed the bill into law, officially making it Republic Act No. 1425, also known as the Rizal Law.</p>
+            </div>
+            <div class="box" data-aos="slide-left">
+                <h3>Impact of the Rizal Law</h3>
+                <p>The Rizal Law mandated the inclusion of courses on the life, works, and writings of Jose Rizal in all educational institutions in the Philippines. It also authorized the distribution of inexpensive copies of *Noli Me Tangere* and *El Filibusterismo* and their translations into various Philippine languages, ensuring that Rizal’s ideas continue to inspire future generations of Filipinos.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Literary Works Section -->
-    <section id="literary-works">
-        <h2>Literary Works</h2>
-        <p>Rizal’s literary works played a crucial role in the Philippine revolution. His most famous works, *Noli Me Tangere* (1887) and *El Filibusterismo* (1891), exposed the injustices committed by the Spanish authorities against the Filipino people. These novels helped awaken national consciousness and inspired many Filipinos to demand reforms and fight for independence.</p>
-
-        <p>Both novels highlighted the social and political issues that plagued the Philippines during the Spanish colonial period, including corruption, abuse of power, and the exploitation of the Filipino people.</p>
+    <!-- Biography Section -->
+    <section id="life-of-rizal" class="content-section" data-aos="fade-up">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2 data-aos="fade-down">Life of Jose Rizal</h2>
+            <div class="box" data-aos="slide-left">
+                <h3>Early Life</h3>
+                <img src="src/calamba.jpg" alt="Calamba" class="framed-image" width="200" height="150" data-aos="zoom-in-left">
+                <p>José Rizal was born on June 19, 1861, in Calamba, Laguna. He was the seventh of eleven children in a well-educated and prominent family.</p>
+            </div>
+            <div class="box" data-aos="slide-right">
+                <h3>Education</h3>
+                <img src="src/ateneo.jpg" alt="Ateneo" class="framed-image" width="200" height="150" data-aos="zoom-in-right">
+                <p>Rizal studied at Ateneo Municipal de Manila, then later pursued higher education in Europe, becoming a skilled ophthalmologist and a vocal advocate for reform.</p>
+            </div>
+            <div class="box" data-aos="slide-left">
+                <h3>Legacy</h3>
+                <img src="src/novel.jpg" alt="Novels" class="framed-image" width="200" height="150" data-aos="zoom-in-left">
+                <p>His novels, "Noli Me Tangere" and "El Filibusterismo", exposed the injustices of Spanish rule and ignited Filipino nationalism.</p>
+            </div>
+        </div>
     </section>
-
-    <!-- Revolutionary Ideas Section -->
-    <section id="revolutionary-ideas">
-        <h2>Revolutionary Ideas</h2>
-        <p>Although Rizal was not a direct participant in the revolution, his writings were instrumental in shaping the nationalist movement in the Philippines. His ideas on social justice, reform, and freedom inspired countless Filipinos, including leaders of the revolution, to demand independence from Spanish rule.</p>
-
-        <p>Rizal’s advocacy for peaceful reform was evident in his writings and his efforts to engage in dialogue with Spanish authorities. However, the failure of the Spanish government to listen to his calls for reform led him to a more radical path. His ideas would later be adopted by revolutionaries such as Andres Bonifacio, Emilio Aguinaldo, and other key figures in the fight for independence.</p>
-    </section>
-
-    <!-- Legacy Section -->
-    <section id="legacy">
-        <h2>Legacy of Jose Rizal</h2>
-        <p>Rizal’s execution on December 30, 1896, marked a pivotal moment in Philippine history. His death inspired the Filipino people to rise up against Spanish colonial rule, leading to the eventual declaration of Philippine independence in 1898.</p>
-
-        <p>Today, Rizal is considered the national hero of the Philippines, and his life and works continue to inspire generations of Filipinos. His values of education, freedom, and justice remain central to the country's identity and progress.</p>
-    </section>
-
 
     <!-- Footer -->
     <footer>
         <p>© 2024 Life and Works of Rizal. All rights reserved.</p>
     </footer>
 
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        function toggleDropdown() {
-            const dropdown = document.getElementById("dropdown");
-            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-        }
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: true, // Ensure that the animations only trigger once
+        });
     </script>
-
 </body>
 
 </html>

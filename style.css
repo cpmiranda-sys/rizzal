@@ -1,142 +1,222 @@
-/* Reset */
-* {
+/* General Styles */
+/* Navbar Styles */
+.navbar {
+  background-color: #121212; /* Black background for the navbar */
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  text-align: center;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body, html {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: white;
-  background-color: #121212;
+.navbar-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  color: #ddb01d; /* Yellow color for text */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #ffae00; /* Yellow background on hover */
+  color: #121212; /* Change text color to black on hover */
+}
+
+body {
   background-image: url('src/background.jpg');
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth; /* Ensures smooth scrolling when using anchor links */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Navigation */
-header {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 15px 0;
-}
-
-nav ul {
-  list-style: none;
+/* Hero Section Scroll Animation */
+.hero {
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 50px;
+  background: rgba(30, 30, 30, 0.7); /* Dark background */
+  position: relative;
+  z-index: 1;
 }
 
-nav ul li {
-  margin: 0 20px;
+/* Hero Text Animation */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
 }
 
-nav ul li a {
-  color: #fff;
+.hero-text h1 {
+  font-size: 3rem;
+  color: #ddb01d;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.hero .button {
+  background: #ddb01d;
+  color: #121212;
+  padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
-  color: #f4a261;
+.hero .button:hover {
+  background: #ffae00;
 }
 
-/* Section Styling */
-section {
-  padding: 80px 20px;
-  text-align: center;
+.framed-image {
+  max-width: 400px;
+  border: 15px solid #ffd700;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.7);
+  transition: 0.3s ease;
 }
 
-h2 {
-  margin-bottom: 40px;
-  color: #f4a261;
-  font-size: 2.4em;
-  transition: transform 0.3s ease;
-}
-
-section:hover h2 {
+.framed-image:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 30px rgba(255, 215, 0, 1);
 }
 
-/* Background Overlay for Better Readability */
-section {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 60px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-section:hover {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-/* Dropdown */
-.dropdown {
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.dropdown-btn {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.2em;
-  background: #f4a261;
-  border: none;
-  cursor: pointer;
-  color: white;
-  text-align: center;
-  transition: background 0.3s ease;
-}
-
-.dropdown-btn:hover {
-  background: #e76f51;
-}
-
-.dropdown-content {
-  display: none;
-  background-color: #333;
-  color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.5s ease-in-out;
+/* Animation for the content sections when scrolling */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Section Scroll Animation */
+.content-section {
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ddb01d;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Section Boxes */
+.box {
+  background: #252525;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  background: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 2s ease-out forwards;
 }
 
 /* Footer */
 footer {
-  text-align: center;
+  background: #1a1a1a;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  color: white;
-  font-size: 1em;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b5b5b5;
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
+/* Custom Background for Headers */
+#legislative-process h2,
+#life-of-rizal h2 {
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ddb01d;
+  display: inline-block;
+  margin: 0;
+}
 
-  nav ul li {
-    margin: 10px 0;
-  }
+/* Ensure Background for Sections is Unaffected */
+#legislative-process .content,
+#life-of-rizal .content {
+  background-color: transparent;
+}
 
-  .dropdown-btn {
-    font-size: 1.1em;
-    padding: 12px;
-  }
+/* AOS Scroll Animations */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
 }
