@@ -17,8 +17,9 @@
         <nav>
             <ul class="navbar-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#legislative-process">Legislative Process</a></li>
+                <li><a href="#legislative-process">Rizal Law</a></li>
                 <li><a href="#life-of-rizal">Biography</a></li>
+                <li><a href="#timeline">Timeline</a></li> <!-- Link to the new Timeline section -->
             </ul>
         </nav>
     </header>
@@ -39,25 +40,25 @@
     <section id="legislative-process" class="content-section" data-aos="fade-up">
         <div class="overlay"></div>
         <div class="content">
-            <h2 data-aos="fade-down">Legislative Process of the Rizal Law</h2>
+            <h2 id="intro" data-aos="fade-down">Legislative Process of the Rizal Law</h2>
             <div class="box" data-aos="slide-left">
                 <h3>Introduction and Filing of the Rizal Bill</h3>
                 <p>On April 3, 1956, Senate Bill No. 438, also known as the Rizal Bill, was introduced by Senator Jose P. Laurel, Chair of the Senate Committee on Education. This bill proposed that all public and private schools in the Philippines include courses on the life, works, and writings of Jose Rizal, particularly his novels *Noli Me Tangere* and *El Filibusterismo*.</p>
             </div>
             <div class="box" data-aos="slide-right">
-                <h3>Opposition and Controversy</h3>
+                <h3 id="opposition">Opposition and Controversy</h3>
                 <p>The bill encountered strong opposition, especially from the Catholic Church, due to the controversial nature of Rizal’s works, which criticized the clergy. This opposition created significant debates between the Church’s allies and those supporting the bill, including Claro M. Recto and Francisco “Soc” Rodrigo, who led the discussions in favor of the bill.</p>
             </div>
             <div class="box" data-aos="slide-left">
-                <h3>Debates and Amendments</h3>
+                <h3 id="debates">Debates and Amendments</h3>
                 <p>Debates on the bill began in both the Senate and the House of Representatives. A similar version of the bill, House Bill No. 5561, was filed on April 19, 1956, by Representative Jacobo Z. Gonzales. The House Committee on Education approved the bill without amendments, but the debates, which started on May 9, 1956, centered around the compulsory reading of the unexpurgated versions of Rizal's novels. To address concerns, Senator Laurel proposed amendments, including removing the requirement to read the novels in their unedited form and including other writings of Rizal.</p>
             </div>
             <div class="box" data-aos="slide-right">
-                <h3>Approval and Final Steps</h3>
+                <h3 id="approval">Approval and Final Steps</h3>
                 <p>The amended bill was eventually agreed upon by both houses of Congress. However, technical delays nearly halted its passage, as the House was about to adjourn and President Magsaysay had not prioritized the bill. Skillful negotiations ensured that no further amendments were added, and the bill was transmitted to the President without delay. On June 12, 1956, President Ramon Magsaysay signed the bill into law, officially making it Republic Act No. 1425, also known as the Rizal Law.</p>
             </div>
             <div class="box" data-aos="slide-left">
-                <h3>Impact of the Rizal Law</h3>
+                <h3 id="impact">Impact of the Rizal Law</h3>
                 <p>The Rizal Law mandated the inclusion of courses on the life, works, and writings of Jose Rizal in all educational institutions in the Philippines. It also authorized the distribution of inexpensive copies of *Noli Me Tangere* and *El Filibusterismo* and their translations into various Philippine languages, ensuring that Rizal’s ideas continue to inspire future generations of Filipinos.</p>
             </div>
         </div>
@@ -65,27 +66,80 @@
 
     <!-- Biography Section -->
     <section id="life-of-rizal" class="content-section" data-aos="fade-up">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2 data-aos="fade-down">Life of Jose Rizal</h2>
-            <div class="box" data-aos="slide-left">
-                <h3>Early Life</h3>
-                <img src="src/calamba.jpg" alt="Calamba" class="framed-image" width="200" height="150" data-aos="zoom-in-left">
-                <p>José Rizal was born on June 19, 1861, in Calamba, Laguna. He was the seventh of eleven children in a well-educated and prominent family.</p>
-            </div>
-            <div class="box" data-aos="slide-right">
-                <h3>Education</h3>
-                <img src="src/ateneo.jpg" alt="Ateneo" class="framed-image" width="200" height="150" data-aos="zoom-in-right">
-                <p>Rizal studied at Ateneo Municipal de Manila, then later pursued higher education in Europe, becoming a skilled ophthalmologist and a vocal advocate for reform.</p>
-            </div>
-            <div class="box" data-aos="slide-left">
-                <h3>Legacy</h3>
-                <img src="src/novel.jpg" alt="Novels" class="framed-image" width="200" height="150" data-aos="zoom-in-left">
-                <p>His novels, "Noli Me Tangere" and "El Filibusterismo", exposed the injustices of Spanish rule and ignited Filipino nationalism.</p>
-            </div>
-        </div>
+        <!-- ... (Existing content) ... -->
     </section>
 
+<!-- Timeline Section -->
+<section id="timeline" class="content-section" data-aos="fade-up">
+    <h2>Timeline of José Rizal's Life</h2>
+    <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1861 - Birth of José Rizal</h3>
+            <p>José Rizal was born on June 19, 1861, in Calamba, Laguna. He was the seventh of 11 children in his family.</p>
+            <button class="more-info" onclick="togglePopup('popup1')">More Info</button>
+            <div class="popup" id="popup1">
+                <p>Rizal's parents were well-educated, and his early education began at home, with a strong influence from his mother, Teodora Alonso Realonda.</p>
+                <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+            </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1877 - Entry to Ateneo Municipal de Manila</h3>
+            <p>In 1877, Rizal entered Ateneo Municipal de Manila, where he earned his Bachelor's degree in Arts with the highest honors.</p>
+            <button class="more-info" onclick="togglePopup('popup2')">More Info</button>
+            <div class="popup" id="popup2">
+                <p>Rizal’s success at Ateneo helped shape his intellectual development. He earned several awards for his academic and extracurricular achievements.</p>
+                <button class="close-btn" onclick="closePopup('popup2')">Close</button>
+            </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1882 - Travels to Spain</h3>
+            <p>Rizal traveled to Spain in 1882 to continue his studies at the Universidad Central de Madrid, specializing in medicine.</p>
+            <button class="more-info" onclick="togglePopup('popup3')">More Info</button>
+            <div class="popup" id="popup3">
+                <p>In Spain, Rizal became an important figure in the Propaganda Movement, which aimed to reform Spanish colonial rule in the Philippines.</p>
+                <button class="close-btn" onclick="closePopup('popup3')">Close</button>
+            </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1887 - Publication of "Noli Me Tangere"</h3>
+            <p>Rizal’s first novel, *Noli Me Tangere*, was published in 1887, highlighting the social injustices in the Philippines under Spanish rule.</p>
+            <button class="more-info" onclick="togglePopup('popup4')">More Info</button>
+            <div class="popup" id="popup4">
+                <p>The novel was banned by the Spanish authorities, but it inspired a new wave of nationalism and resistance among Filipinos.</p>
+                <button class="close-btn" onclick="closePopup('popup4')">Close</button>
+            </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1891 - Publication of "El Filibusterismo"</h3>
+            <p>Rizal’s second novel, *El Filibusterismo*, was published in 1891 and continued his critique of Spanish colonial rule, advocating for revolutionary change.</p>
+            <button class="more-info" onclick="togglePopup('popup5')">More Info</button>
+            <div class="popup" id="popup5">
+                <p>The novel is darker than its predecessor and emphasizes the need for political change through revolution.</p>
+                <button class="close-btn" onclick="closePopup('popup5')">Close</button>
+            </div>
+        </div>
+
+        <!-- Timeline Item 6 -->
+        <div class="timeline-item" data-aos="fade-up">
+            <h3>1892 - Exile to Dapitan</h3>
+            <p>Rizal was exiled to Dapitan in Mindanao, where he continued his medical practice and engaged in community development.</p>
+            <button class="more-info" onclick="togglePopup('popup6')">More Info</button>
+            <div class="popup" id="popup6">
+                <p>During his exile, Rizal established a school, made scientific studies, and contributed to the development of the local community.</p>
+                <button class="close-btn" onclick="closePopup('popup6')">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <p>© 2024 Life and Works of Rizal. All rights reserved.</p>
@@ -98,8 +152,18 @@
         AOS.init({
             duration: 1000,
             easing: 'ease-out',
-            once: true, // Ensure that the animations only trigger once
+            once: false, // Ensure that the animations only trigger once
         });
+
+        // Function to toggle popups
+        function togglePopup(popupId) {
+            document.getElementById(popupId).classList.toggle("active");
+        }
+
+        // Function to close the popup
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove("active");
+        }
     </script>
 </body>
 
