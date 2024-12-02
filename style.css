@@ -1,7 +1,14 @@
 /* General Styles */
+body {
+  background: linear-gradient(to bottom, #0d0d0d, #121212);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
 /* Navbar Styles */
 .navbar {
-  background-color: #121212; /* Black background for the navbar */
+  background-color: #121212;
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -10,7 +17,6 @@
   z-index: 10;
 }
 
-/* Navbar Links */
 .navbar-links {
   list-style: none;
   text-align: center;
@@ -24,7 +30,7 @@
 }
 
 .navbar-links a {
-  color: #ddb01d; /* Yellow color for text */
+  color: #ddb01d;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -34,48 +40,33 @@
 }
 
 .navbar-links a:hover {
-  background-color: #ffae00; /* Yellow background on hover */
-  color: #121212; /* Change text color to black on hover */
+  background-color: #ffae00;
+  color: #121212;
 }
 
-body {
-  background-image: url('src/background.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  color: white;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth; /* Ensures smooth scrolling when using anchor links */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Hero Section Scroll Animation */
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 50px;
-  background: rgba(30, 30, 30, 0.7); /* Dark background */
+  background: rgba(30, 30, 30, 0.7);
   position: relative;
   z-index: 1;
 }
 
-/* Hero Text Animation */
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  text-align: center;
 }
 
 .hero-text h1 {
-  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
   font-size: 3rem;
-  font-stretch: ultra-expanded;
   color: #ddb01d;
+  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
 }
 
 .hero-text p {
@@ -91,69 +82,22 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .hero .button:hover {
   background: #ffae00;
 }
 
-.framed-image {
-  max-width: 400px;
-  border: 15px solid #ffd700;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.7);
-  transition: 0.3s ease;
-}
-
-.framed-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 30px rgba(255, 215, 0, 1);
-}
-
-/* Animation for the content sections when scrolling */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Content Section Scroll Animation */
+/* Content Section */
 .content-section {
   padding: 40px;
   text-align: center;
   position: relative;
   margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards;
 }
 
-.content-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ddb01d;
-}
-
-.content-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-/* Section Boxes */
+/* Sections Content Style */
 .box {
   background: #252525;
   padding: 20px;
@@ -161,20 +105,9 @@ body {
   border-radius: 10px;
   max-width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.5s ease-out forwards;
 }
 
 /* Timeline */
-#timeline {
-  background-color: #1a1a1a; /* Dark background for timeline */
-  padding: 50px 0;
-  color: white;
-  text-align: center;
-}
-
 .timeline {
   display: flex;
   flex-direction: column;
@@ -188,75 +121,34 @@ body {
   width: 80%;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.5s ease-out forwards;
 }
 
-.timeline-item h3 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.timeline-item p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.more-info {
-  background-color: #ddb01d; /* Yellow button color */
-  color: #121212;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.more-info:hover {
-  background-color: #ffae00;
-  color: #121212;
-}
-
-/* Popup Styling */
-.popup {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #fff;
+/* Quiz Section */
+.quiz {
+  background-color: #333;
   padding: 20px;
   border-radius: 8px;
-  width: 250px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 100;
 }
 
-.popup.active {
-  display: block;
-}
-
-.popup p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.close-btn {
-  background-color: #ff4e4e;
-  color: white;
-  padding: 5px 10px;
+.quiz-btn {
+  background-color: #ddb01d;
   border: none;
+  color: #121212;
+  padding: 10px 15px;
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
-.close-btn:hover {
-  background-color: #e60000;
+.quiz-btn:hover {
+  background-color: #ffae00;
+}
+
+/* Answer Box */
+.answer {
+  background-color: #fff; 
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Footer */
@@ -264,28 +156,10 @@ footer {
   background: #1a1a1a;
   padding: 20px;
   text-align: center;
-  font-size: 0.9rem;
   color: #b5b5b5;
 }
 
-/* Custom Background for Headers */
-#legislative-process h2,
-#life-of-rizal h2 {
-  background-color: #1a1a1a;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #ddb01d;
-  display: inline-block;
-  margin: 0;
-}
-
-/* Ensure Background for Sections is Unaffected */
-#legislative-process .content,
-#life-of-rizal .content {
-  background-color: transparent;
-}
-
-/* AOS Scroll Animations */
+/* AOS Animations */
 [data-aos="fade-up"] {
   opacity: 0;
   transform: translateY(30px);
@@ -295,4 +169,10 @@ footer {
 [data-aos="fade-up"].aos-animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Ensuring Background for Sections is Unaffected */
+#legislative-process .content,
+#life-of-rizal .content {
+  background-color: transparent;
 }

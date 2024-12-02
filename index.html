@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Rizal - Life and Works</title>
-
-    <!-- AOS Animation Library -->
+    <title>Life and Works of Jose Rizal</title>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header -->
     <header class="navbar">
         <nav>
             <ul class="navbar-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#legislative-process">Rizal Law</a></li>
                 <li><a href="#life-of-rizal">Biography</a></li>
-                <li><a href="#timeline">Timeline</a></li> <!-- Link to the new Timeline section -->
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#quiz">Quiz</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero" data-aos="fade-up">
         <div class="hero-content">
             <img src="src/rizal.jpg" alt="Jose Rizal" class="framed-image" data-aos="zoom-in-left">
             <div class="hero-text">
                 <h1 data-aos="fade-right">Jose Rizal</h1>
-                <p data-aos="fade-left">A prominent figure in Philippine history, Dr. José Protacio Rizal Mercado y Alonzo Realonda was a Filipino nationalist, polymath, and revolutionary. He played a crucial role in the country's movement for independence from Spanish colonial rule.</p>
+                <p data-aos="fade-left">A prominent figure in Philippine history, Dr. José Rizal was a nationalist, polymath, and revolutionary.</p>
                 <a href="#legislative-process" class="button" data-aos="fade-up" data-aos-delay="500">Learn More</a>
             </div>
         </div>
@@ -66,105 +61,99 @@
 
     <!-- Biography Section -->
     <section id="life-of-rizal" class="content-section" data-aos="fade-up">
-        <!-- ... (Existing content) ... -->
+        <h2>Life of José Rizal</h2>
+        <div class="box" data-aos="fade-up">
+            <h3>Early Life</h3>
+            <p>Rizal was born on June 19, 1861, in Calamba, Laguna. As the seventh of eleven children, he grew up in a comfortable household with an emphasis on education.</p>
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h3>Education and Travels</h3>
+            <p>He pursued his studies in Manila and later in Europe, obtaining various degrees and becoming fluent in several languages. His travels exposed him to revolutionary ideas that influenced his writings.</p>
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h3>Writings</h3>
+            <p><strong>Noli Me Tangere</strong>: Rizal's first novel that exposed the abuses of the Spanish colonial government.</p>
+            <p><strong>El Filibusterismo</strong>: His second novel, which is a darker view of Philippine society and a plea for reform.</p>
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h3>Legacy</h3>
+            <p>Rizal's ideas ignited the Philippine revolution against Spanish colonization and his martyrdom on December 30, 1896, solidified his legacy as a national hero.</p>
+        </div>
     </section>
 
-<!-- Timeline Section -->
-<section id="timeline" class="content-section" data-aos="fade-up">
-    <h2>Timeline of José Rizal's Life</h2>
-    <div class="timeline">
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1861 - Birth of José Rizal</h3>
-            <p>José Rizal was born on June 19, 1861, in Calamba, Laguna. He was the seventh of 11 children in his family.</p>
-            <button class="more-info" onclick="togglePopup('popup1')">More Info</button>
-            <div class="popup" id="popup1">
-                <p>Rizal's parents were well-educated, and his early education began at home, with a strong influence from his mother, Teodora Alonso Realonda.</p>
-                <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+    <!-- Timeline Section -->
+    <section id="timeline" class="content-section" data-aos="fade-up">
+        <h2>Timeline of José Rizal's Life</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1861</h3>
+                <p>José Rizal is born in Calamba, Laguna.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1877</h3>
+                <p>Graduates with a degree in Philosophy and Letters from the University of Santo Tomas.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1887</h3>
+                <p>Noli Me Tangere is published in Berlin.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1892</h3>
+                <p>Rizal establishes the La Liga Filipina in Manila, advocating for reforms and national unity.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1892-1896</h3>
+                <p>Exiled in Dapitan, Rizal engages in community service and educational endeavors. He teaches local children, establishes a school, and introduces various agricultural innovations such as new farming techniques.</p>
+                <p>Additionally, he conducts scientific studies documenting the region's unique flora and fauna, contributing to his work in natural sciences.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1893</h3>
+                <p>Rizal writes "El Filibusterismo," continuing his critique of Spanish colonialism and advocating for reforms.</p>
+            </div>
+            <div class="timeline-item" data-aos="fade-up">
+                <h3>1896</h3>
+                <p>Rizal is executed in Bagumbayan (now Luneta Park) on December 30.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1877 - Entry to Ateneo Municipal de Manila</h3>
-            <p>In 1877, Rizal entered Ateneo Municipal de Manila, where he earned his Bachelor's degree in Arts with the highest honors.</p>
-            <button class="more-info" onclick="togglePopup('popup2')">More Info</button>
-            <div class="popup" id="popup2">
-                <p>Rizal’s success at Ateneo helped shape his intellectual development. He earned several awards for his academic and extracurricular achievements.</p>
-                <button class="close-btn" onclick="closePopup('popup2')">Close</button>
+    <!-- Quiz Section -->
+    <section id="quiz" class="content-section" data-aos="fade-up">
+        <h2>Test Your Knowledge about José Rizal</h2>
+        <div class="quiz">
+            <p>Question 1: What was the title of Rizal's first novel?</p>
+            <button class="quiz-btn" onclick="showAnswer('answer1')">Show Answer</button>
+            <div class="answer" id="answer1" style="display: none;">
+                <p>Noli Me Tangere</p>
+                <button onclick="hideAnswer('answer1')">Close</button>
+            </div>
+            <p>Question 2: What is the significance of December 30?</p>
+            <button class="quiz-btn" onclick="showAnswer('answer2')">Show Answer</button>
+            <div class="answer" id="answer2" style="display: none;">
+                <p>It is the date of Rizal's execution, which is now commemorated as Rizal Day.</p>
+                <button onclick="hideAnswer('answer2')">Close</button>
             </div>
         </div>
+    </section>
 
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1882 - Travels to Spain</h3>
-            <p>Rizal traveled to Spain in 1882 to continue his studies at the Universidad Central de Madrid, specializing in medicine.</p>
-            <button class="more-info" onclick="togglePopup('popup3')">More Info</button>
-            <div class="popup" id="popup3">
-                <p>In Spain, Rizal became an important figure in the Propaganda Movement, which aimed to reform Spanish colonial rule in the Philippines.</p>
-                <button class="close-btn" onclick="closePopup('popup3')">Close</button>
-            </div>
-        </div>
-
-        <!-- Timeline Item 4 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1887 - Publication of "Noli Me Tangere"</h3>
-            <p>Rizal’s first novel, *Noli Me Tangere*, was published in 1887, highlighting the social injustices in the Philippines under Spanish rule.</p>
-            <button class="more-info" onclick="togglePopup('popup4')">More Info</button>
-            <div class="popup" id="popup4">
-                <p>The novel was banned by the Spanish authorities, but it inspired a new wave of nationalism and resistance among Filipinos.</p>
-                <button class="close-btn" onclick="closePopup('popup4')">Close</button>
-            </div>
-        </div>
-
-        <!-- Timeline Item 5 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1891 - Publication of "El Filibusterismo"</h3>
-            <p>Rizal’s second novel, *El Filibusterismo*, was published in 1891 and continued his critique of Spanish colonial rule, advocating for revolutionary change.</p>
-            <button class="more-info" onclick="togglePopup('popup5')">More Info</button>
-            <div class="popup" id="popup5">
-                <p>The novel is darker than its predecessor and emphasizes the need for political change through revolution.</p>
-                <button class="close-btn" onclick="closePopup('popup5')">Close</button>
-            </div>
-        </div>
-
-        <!-- Timeline Item 6 -->
-        <div class="timeline-item" data-aos="fade-up">
-            <h3>1892 - Exile to Dapitan</h3>
-            <p>Rizal was exiled to Dapitan in Mindanao, where he continued his medical practice and engaged in community development.</p>
-            <button class="more-info" onclick="togglePopup('popup6')">More Info</button>
-            <div class="popup" id="popup6">
-                <p>During his exile, Rizal established a school, made scientific studies, and contributed to the development of the local community.</p>
-                <button class="close-btn" onclick="closePopup('popup6')">Close</button>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Footer -->
     <footer>
         <p>© 2024 Life and Works of Rizal. All rights reserved.</p>
     </footer>
 
-    <!-- AOS JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-out',
-            once: false, // Ensure that the animations only trigger once
-        });
+        AOS.init({ duration: 1000 });
 
-        // Function to toggle popups
-        function togglePopup(popupId) {
-            document.getElementById(popupId).classList.toggle("active");
+        // Show Answer Function
+        function showAnswer(answerId) {
+            document.getElementById(answerId).style.display = 'block';
         }
 
-        // Function to close the popup
-        function closePopup(popupId) {
-            document.getElementById(popupId).classList.remove("active");
+        // Hide Answer Function
+        function hideAnswer(answerId) {
+            document.getElementById(answerId).style.display = 'none';
         }
     </script>
 </body>
-
 </html>
