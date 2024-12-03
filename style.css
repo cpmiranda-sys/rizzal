@@ -1,14 +1,21 @@
 /* General Styles */
 body {
-  background: linear-gradient(to bottom, #0d0d0d, #121212);
-  color: #fff;
+  background: url('src/background.jpg') no-repeat center center fixed; /* Old paper background */
+  background-size: cover; 
+  color: #3e2723; /* Dark brown for body text */
   font-family: 'Arial', sans-serif;
   margin: 0;
 }
 
+/* Title Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Brush Script MT', 'Brush Script Std', cursive; /* Cursive font for all titles */
+  color: #c43e00; /* Deep burgundy for titles */
+}
+
 /* Navbar Styles */
 .navbar {
-  background-color: #121212;
+  background-color: #4e342e; /* Rich brown */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -30,7 +37,7 @@ body {
 }
 
 .navbar-links a {
-  color: #ddb01d;
+  color: #c5b358; /* Soft gold */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -40,8 +47,7 @@ body {
 }
 
 .navbar-links a:hover {
-  background-color: #ffae00;
-  color: #121212;
+  background-color: #c43e00; /* Muted bronze for hover effect */
 }
 
 /* Hero Section */
@@ -51,7 +57,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 50px;
-  background: rgba(30, 30, 30, 0.7);
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent for readability */
   position: relative;
   z-index: 1;
 }
@@ -65,19 +71,18 @@ body {
 
 .hero-text h1 {
   font-size: 3rem;
-  color: #ddb01d;
-  font-family: 'Brush Script MT', 'Brush Script Std', cursive;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   line-height: 1.5;
   max-width: 500px;
+  color: #3e2723; /* Dark brown */
 }
 
 .hero .button {
-  background: #ddb01d;
-  color: #121212;
+  background: #c5b358; /* Soft gold */
+  color: #3e2723; 
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
@@ -86,7 +91,7 @@ body {
 }
 
 .hero .button:hover {
-  background: #ffae00;
+  background: #c43e00; /* Muted bronze on hover */
 }
 
 /* Content Section */
@@ -99,12 +104,12 @@ body {
 
 /* Sections Content Style */
 .box {
-  background: #252525;
+  background: #faf0e6; /* Light parchment color */
   padding: 20px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Timeline */
@@ -116,7 +121,7 @@ body {
 }
 
 .timeline-item {
-  background: #252525;
+  background: #faf0e6; /* Light parchment color */
   padding: 20px;
   width: 80%;
   border-radius: 8px;
@@ -125,38 +130,38 @@ body {
 
 /* Quiz Section */
 .quiz {
-  background-color: #333;
+  background-color: #f5f5f5; /* Slightly darker than parchment */
   padding: 20px;
   border-radius: 8px;
 }
 
 .quiz-btn {
-  background-color: #ddb01d;
+  background-color: #c5b358; /* Soft gold */
   border: none;
-  color: #121212;
+  color: #3e2723; 
   padding: 10px 15px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .quiz-btn:hover {
-  background-color: #ffae00;
+  background-color: #c43e00; /* Muted bronze on hover */
 }
 
 /* Answer Box */
 .answer {
   background-color: #fff; 
-  color: #333;
+  color: #333; /* Text color for answers */
   padding: 10px;
   border-radius: 5px;
 }
 
 /* Footer */
 footer {
-  background: #1a1a1a;
+  background: #4e342e; /* Rich brown */
   padding: 20px;
   text-align: center;
-  color: #b5b5b5;
+  color: #b0bec5; /* Light gray */
 }
 
 /* AOS Animations */
@@ -174,5 +179,13 @@ footer {
 /* Ensuring Background for Sections is Unaffected */
 #legislative-process .content,
 #life-of-rizal .content {
-  background-color: transparent;
+  background-color: transparent; /* Keep sections background transparent */
+}
+
+/* Styles for specific headings */
+#legislative-process .black-title,
+#life-of-rizal .black-title,
+#timeline .black-title,
+#quiz-title .black-title {
+  color: #3e2723; /* Dark brown for headings */
 }
