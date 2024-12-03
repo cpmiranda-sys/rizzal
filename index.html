@@ -15,7 +15,7 @@
                 <li><a href="#legislative-process">Rizal Law</a></li>
                 <li><a href="#life-of-rizal">Biography</a></li>
                 <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#quiz">Quiz</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -136,31 +136,6 @@
         </div>
     </section>
 
-    <!-- Quiz Section -->
-    <section id="quiz" class="content-section" data-aos="fade-up">
-        <h2 class="black-title">Test Your Knowledge about José Rizal</h2>
-        <div class="quiz">
-            <p>Question 1: What was the title of Rizal's first novel?</p>
-            <button class="quiz-btn" onclick="showAnswer('answer1')">Show Answer</button>
-            <div class="answer" id="answer1" style="display: none;">
-                <p>Noli Me Tangere</p>
-                <button onclick="hideAnswer('answer1')">Close</button>
-            </div>
-            <p>Question 2: What is the significance of December 30?</p>
-            <button class="quiz-btn" onclick="showAnswer('answer2')">Show Answer</button>
-            <div class="answer" id="answer2" style="display: none;">
-                <p>It is the date of Rizal's execution, which is now commemorated as Rizal Day.</p>
-                <button onclick="hideAnswer('answer2')">Close</button>
-            </div>
-            <p>Question 3: Who was Rizal's common-law wife?</p>
-            <button class="quiz-btn" onclick="showAnswer('answer3')">Show Answer</button>
-            <div class="answer" id="answer3" style="display: none;">
-                <p>Josephine Bracken</p>
-                <button onclick="hideAnswer('answer3')">Close</button>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <p>© 2024 Life and Works of Rizal. All rights reserved.</p>
     </footer>
@@ -169,16 +144,6 @@
     <script>
         // Initialize AOS
         AOS.init({ duration: 1000 });
-
-        // Show Answer Function
-        function showAnswer(answerId) {
-            document.getElementById(answerId).style.display = 'block';
-        }
-
-        // Hide Answer Function
-        function hideAnswer(answerId) {
-            document.getElementById(answerId).style.display = 'none';
-        }
     </script>
 </body>
 </html>
