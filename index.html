@@ -15,7 +15,7 @@
                 <li><a href="#legislative-process">Rizal Law</a></li>
                 <li><a href="#life-of-rizal">Biography</a></li>
                 <li><a href="#timeline">Timeline</a></li>
-                
+                <li><a href="#quiz">Quiz</a></li>
             </ul>
         </nav>
     </header>
@@ -136,6 +136,19 @@
         </div>
     </section>
 
+    <!-- Quiz Section -->
+    <section id="quiz" class="content-section" data-aos="fade-up">
+        <h2 class="black-title">Quiz: Test Your Knowledge About José Rizal</h2>
+        <div class="quiz">
+            <p id="quiz-question"></p>
+            <div id="answers" class="answers">
+                <!-- Answer buttons will be generated here -->
+            </div>
+            <div id="result"></div>
+            <button class="quiz-btn" id="next-question" style="display:none;" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </section>
+
     <footer>
         <p>© 2024 Life and Works of Rizal. All rights reserved.</p>
     </footer>
@@ -144,6 +157,61 @@
     <script>
         // Initialize AOS
         AOS.init({ duration: 1000 });
+
+        // Quiz Logic
+        const questions = [
+            { question: "What year was José Rizal executed?", answer: "1896", responses: ["1896", "1901", "1887", "1892"] },
+            { question: "What is the title of Rizal's first novel?", answer: "Noli Me Tangere", responses: ["Noli Me Tangere", "El Filibusterismo", "La Solidaridad", "A La Patria"] },
+            { question: "Which of the following was a pen name used by Rizal?", answer: "Laong Laan", responses: ["Laong Laan", "Dimasalang", "Jose Mercado", "All of the above"] },
+            { question: "What was the name of José Rizal’s mother?", answer: "Teodora Alonso Realonda", responses: ["Teodora Alonso Realonda", "Rizalina", "Maria Clara", "Soledad"] }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function displayQuestion() {
+            const questionElement = document.getElementById("quiz-question");
+            const answersElement = document.getElementById("answers");
+            questionElement.innerText = questions[currentQuestionIndex].question;
+            answersElement.innerHTML = ""; // Clear previous answers
+
+            questions[currentQuestionIndex].responses.forEach(response => {
+                const button = document.createElement("button");
+                button.innerText = response;
+                button.classList.add("quiz-btn");
+                button.onclick = function() { checkAnswer(response); };
+                answersElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedAnswer) {
+            const resultElement = document.getElementById("result");
+            const correctAnswer = questions[currentQuestionIndex].answer;
+
+            if (selectedAnswer === correctAnswer) {
+                resultElement.innerText = "Correct! " + correctAnswer + " is the right answer.";
+                resultElement.style.color = "green"; // Correct answer color
+            } else {
+                resultElement.innerText = "Incorrect. Try again!";
+                resultElement.style.color = "red"; // Incorrect answer color
+            }
+            resultElement.style.display = "block"; // Show result
+            document.getElementById("next-question").style.display = "block"; // Show next button
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+                document.getElementById("result").style.display = "none"; // Hide result
+                document.getElementById("next-question").style.display = "none"; // Hide next button
+            } else {
+                document.getElementById("quiz").innerHTML = "<h2>Thank you for participating!</h2><p>You have completed the quiz.</p>";
+            }
+        }
+
+        // Initial display of the first question
+        displayQuestion();
     </script>
 </body>
 </html>

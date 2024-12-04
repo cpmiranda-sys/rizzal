@@ -189,3 +189,21 @@ footer {
 #quiz-title .black-title {
   color: #3e2723; /* Dark brown for headings */
 }
+
+/* Quiz Styles */
+.quiz {
+  background-color: #f5f5f5; /* Slightly darker than parchment */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 500px; /* Centering the quiz */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3e2723; /* Dark brown for text */
+  display: none; /* Initially hidden */
+}
